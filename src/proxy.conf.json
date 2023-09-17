@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "https://master.spicaengine.com/api",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
