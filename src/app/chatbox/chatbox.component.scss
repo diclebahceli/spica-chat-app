@@ -8,7 +8,7 @@
 .container {
     width: 80%;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 12rem;
     letter-spacing: 0.5px;
     height: 80%;
 
@@ -56,7 +56,7 @@ img {
 
 /* Styling the chat box container */
 .chat-page {
-    padding: 0 0 50px 0;
+    //padding: 0 0 50px 0;
 }
 
 .msg-inbox {
@@ -68,13 +68,13 @@ img {
 
 
 .chats {
-    padding: 30px 15px 0 25px;
+    //padding: 30px 15px 0 25px;
 }
 
 /* Styling the message page */
 
 .msg-page {
-    max-height: 500px;
+    height: 500px;
     overflow-y: auto;
 }
 
@@ -89,10 +89,9 @@ img {
 .input-group {
     float: right;
     margin-top: 13px;
-    margin-right: 20px;
     outline: none !important;
     border-radius: 20px;
-    width: 61% !important;
+    width: 100% !important;
     background-color: #fff;
     position: relative;
     display: flex;
@@ -193,7 +192,7 @@ received-chats-img {
 
 .outgoing-chats {
     overflow: hidden;
-    margin: 26px 20px;
+    margin: -5px 20px;
 }
 
 .outgoing-chats-msg p {
@@ -210,7 +209,7 @@ received-chats-img {
 }
 .outgoing-chats-msg {
         float: right;
-        width: 46%;
+        width: 40%;
     }
 
 /* Styling the avatar */

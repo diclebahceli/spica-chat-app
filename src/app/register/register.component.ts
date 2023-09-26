@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-
-
-
+interface RegisterResponse {
+  chatid: string; 
+  user:string
+}
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,7 +24,14 @@ export class RegisterComponent {
   handleRegister() {
     console.log("AAAAAAAAAAAA")
     console.log(this.email)
-    return this.http.post(`${this.apiURL}/fn-execute/regg`, {identifier: this.email, password: this.psw}).subscribe((res: any) => {});
+    return this.http.post<RegisterResponse>(`${this.apiURL}/fn-execute/reggisterr`, {identifier: this.email, password: this.psw}).subscribe(response => {
+      
+      console.log('Response:', response['user']);
+      localStorage.setItem('chatId', response['chatid']);
+      localStorage.setItem('user', response['user']);
+    }, error => {
+      console.error('Error:', error);
+    });
   }
 
   
